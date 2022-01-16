@@ -1,0 +1,55 @@
+.index_swiper swiper {
+  widows: 100%;
+  height: 340rpx;
+}
+.index_swiper swiper image {
+  width: 100%;
+}
+.index_nav {
+  display: flex;
+  width: 100%;
+  height: 205rpx;
+  margin-bottom: 20rpx;
+}
+.index_nav navigator {
+  flex: 1;
+  padding: 20rpx;
+}
+.index_nav navigator image {
+  width: 100%;
+}
+.index_floor {
+  width: 750rpx;
+}
+.index_floor .floor_title {
+  height: 100rpx;
+  padding: 10rpx 0;
+}
+.index_floor .floor_title image {
+  height: 100%;
+}
+.index_floor .products {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+}
+.index_floor .products navigator {
+  flex: 33.33%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.index_floor .products navigator:nth-child(n+1) {
+  height: 200rpx;
+  border-left: 10rpx solid #fff;
+}
+.index_floor .products navigator:nth-child(2),
+.index_floor .products navigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+.index_floor .products navigator:nth-child(4) {
+  margin-left: 33.33%;
+}
+.index_floor .products navigator image {
+  width: 100%;
+  height: 100%;
+}

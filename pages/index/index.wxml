@@ -1,0 +1,37 @@
+<view class="pyg_index">
+    <search></search>
+</view>
+<view class="index_swiper">
+    <swiper autoplay="true" interval="2500" circular="true" indicator-dots="{{true}}" indicator-active-color="#fff">
+        <block wx:for="{{swiperList}}" wx:key="goods_id">
+            <swiper-item>
+                <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                    <image src="{{item.image_src}}" lazy-load="true" mode="widthFix"></image>
+                </navigator>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class="index_nav">
+    <block wx:for="{{navList}}" wx:key="name">
+        <navigator url="/pages/category/index">
+            <image src="{{item.image_src}}" mode="widthFix" lazy-load="{{true}}"></image>
+        </navigator>
+    </block>
+</view>
+<view class="index_floor">
+    <block wx:for="{{floorList}}" wx:key="name">
+        <view>
+            <view class="floor_title">
+                <image src="{{item.floor_title.image_src}}" mode="heightFix" lazy-load="{{true}}"></image>
+            </view>
+            <view class="products">
+                <block wx:for="{{item.product_list}}" wx:key="name">
+                    <navigator url="{{item.navigator_url}}">
+                        <image mode="{{index===0?'widthFix':'scaleToFill'}}" src="{{item.image_src}}"></image>
+                    </navigator>
+                </block>
+            </view>
+        </view>
+    </block>
+</view>
